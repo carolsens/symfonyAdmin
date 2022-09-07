@@ -1,0 +1,143 @@
+  .navbar-notification {
+    background-color: yellow;
+    align-content: center;
+    text-align: center;
+  }
+
+  .table__category {
+    margin-left: 50%;
+  }
+
+  .right_col__mensage {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 100px;
+  }
+  
+  .profile_info {
+    text-align: center;
+    width: 100%;
+  }
+
+
+  .right_col__btn {
+    float: right;
+    margin-top: 6px;
+  }
+
+  .panel__category {
+    padding-bottom: 40px;
+  }
+
+  .x_title {
+    border-bottom: none;
+  }
+
+  .table__title th {
+    vertical-align: middle !important;
+  }
+
+
+  .table__btn {
+    width: 75px;
+  }
+
+  .table__itens td {
+    vertical-align: middle;
+  }
+
+  .olho {
+    cursor: pointer;
+    left: 160px;
+    position: absolute;
+    width: 20px;
+    top: 115px;
+    left: 320px;
+  }
+
+  #password {
+    position: relative;
+  }
+
+  
+  .olho-cadastro {
+    cursor: pointer;
+    left: 160px;
+    position: absolute;
+    width: 20px;
+    top: 125px;
+    left: 871px;
+  }
+
+  .olho-cadastro2 {
+    cursor: pointer;
+    left: 160px;
+    position: absolute;
+    width: 20px;
+    top: 172px;
+    left: 871px;
+  }
+
+  .buttom__check {
+    max-width: 70px;
+    height: 38px;
+    margin-left: -10px;
+  }
+
+  .buttom__delet {
+    max-width: 20px;
+    fill:red;
+    background-color: white;
+  }
+
+  .atributos__list {
+    margin-top: -5px;
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  .input__itens {
+    margin-top: 20px;
+  }
+
+  .right_col__searchImg{
+    max-width: 10px;
+  }
+ 
+.right_col__titleChart {
+  text-align: center;
+}
+
+.right_col__charts {
+  display: grid;
+}
+
+.form-control { 
+  max-width: 500px;
+}
+
+h2 {
+  margin-top: 15px !important;
+  margin-bottom: 20px !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.item { 
+  margin-top: 20px;
+}
+
+.btn-right {
+  float: right;
+}
+
+.required:after { 
+  content:" *"; 
+  color: red;
+}
+
+.ln_solid {
+  margin-top: 30px;
+}

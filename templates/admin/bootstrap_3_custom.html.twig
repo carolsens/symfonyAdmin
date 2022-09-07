@@ -1,0 +1,20 @@
+{% extends 'bootstrap_3_horizontal_layout.html.twig' %}
+
+
+{% block form_row -%}
+    
+    {% set row_attr = row_attr|merge({class: (row_attr.class|default('item')) }) %}
+
+    {{ parent() }}
+{%- endblock form_row %}
+
+
+
+{% block form_label_class -%}
+col-form-label col-md-3 col-sm-3 label-align 
+{%- endblock form_label_class %}
+
+{% block form_group_class -%}
+col-md-6 col-sm-6 
+{%- endblock form_group_class %}
+

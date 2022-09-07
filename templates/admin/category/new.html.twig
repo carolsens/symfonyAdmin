@@ -1,0 +1,27 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}New Category
+{% endblock %}
+
+{% block body %}
+	<h1>Categorias</h1>
+	<div class="x_panel">
+		<div class="x_title">
+			<h2>Nova categoria
+				<small></small>
+			</h2>
+
+			<div class="col-md-12 col-sm-12  ">
+				<div class="x_panel">
+
+					<div class="x_content">
+
+						{{ include('admin/category/_form.html.twig') }}
+						<a class="btn btn-secondary btn-right" role="button" href="{{ path('app_category_index') }}">Voltar para a listagem</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

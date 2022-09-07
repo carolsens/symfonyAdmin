@@ -1,0 +1,11 @@
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+
+<form name="product" method="post" class="form-horizontal">
+    
+    {{ form_row(form.name) }}
+	{{ form_row(form.status) }}
+
+	{{ form_rest(form) }}
+	<button class="btn btn-success btn-right">{{ button_label|default('Salvar') }}</button>
+
+</form>

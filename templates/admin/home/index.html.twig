@@ -1,0 +1,15 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Painel administrativo{% endblock %}
+
+{% block body %}
+    Olá! Esse é um admin.<br><br>
+
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <p>Parabéns! Você está no admin.</p>
+        <p>Email: {{ app.user.email }}</p>
+    {% else %}
+        <p>Você não está logado.</p>
+    {% endif %}
+
+{% endblock %}

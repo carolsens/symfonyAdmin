@@ -1,0 +1,24 @@
+{% form_theme form 'admin/bootstrap_3_custom.html.twig' %}
+
+<form
+	name="product" method="post" class="form-horizontal form-label-left">
+
+
+	{#{{ form_widget(form) }}#}
+
+	{{ form_row(form.name) }}
+	{{ form_row(form.price) }}
+	{{ form_row(form.salePrice) }}
+	{{ form_row(form.carousel) }}
+	{{ form_row(form.image1) }}
+	{{ form_row(form.image2) }}
+	{{ form_row(form.image3) }}
+	{{ form_row(form.status) }}
+
+	{{ form_rest(form) }}
+
+	<div class="ln_solid"></div>
+	<div class="col-md-6 col-sm-6 offset-md-3">
+		<button class="btn btn-success">{{ button_label|default('Salvar') }}</button>
+	</div>
+</form>

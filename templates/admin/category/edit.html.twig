@@ -1,0 +1,32 @@
+
+{% block title %}Edição de produtos
+{% endblock %}
+
+{% block body %}
+	<h1>Categorias</h1>
+	<div class="x_panel">
+		<div class="x_title">
+			<h2>Edição de categorias
+				<small></small>
+			</h2>
+
+			<div class="col-md-12 col-sm-12  ">
+				<div class="x_panel">
+
+					<div class="x_content">
+						
+
+						{{ include('/admin/category/_form.html.twig', {'button_label': 'Atualizar'}) }}
+
+
+						{{ include('/admin/category/_delete_form.html.twig') }}
+
+                        
+						<a class="btn btn-secondary btn-right" role="button" href="{{ path('app_category_index') }}">Voltar para a listagem</a>
+				
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

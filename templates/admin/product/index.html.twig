@@ -1,0 +1,64 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Produtos cadastrados
+{% endblock %}
+
+{% block body %}
+	<h1>Produtos</h1>
+	
+	<div class="x_panel">
+		<div class="x_title">
+			<h2>Produtos cadastrados
+				<small></small>
+			</h2>
+			<a class="btn btn-secondary right_col__btn" href="{{ path('app_product_new') }}" role="button">Cadastrar novo produto</a>
+		</div>
+
+		<div class="col-md-12 col-sm-12  ">
+			<div class="x_panel">
+
+				<div class="x_content">
+					<table class="table table-hover">
+						<thead>
+							<tr class="table-title table__title">
+								<th>Nome</th>
+								<th>Preço</th>
+								<th>Preço promocional</th>
+								<th>Carrossel</th>
+								<th>Imagem 1</th>
+								<th>Imagem 2</th>
+								<th>Imagem 3</th>
+								<th>Situação</th>
+								<th class="text-center">Ações</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for product in products %}
+								<tr class="table__itens">
+									<td>{{ product.name }}</td>
+									<td>{{ product.price }}</td>
+									<td>{{ product.salePrice }}</td>
+									<td>{{ product.carousel }}</td>
+									<td>{{ product.image1 }}</td>
+									<td>{{ product.image2 }}</td>
+									<td>{{ product.image3 }}</td>
+									<td>{{ product.status }}</td>
+									<td class="text-center">
+										<a class='btn btn-success table__btn text-center' role="button" href="{{ path('app_product_edit', {'id': product.id}) }}">Editar</a>
+										<br/>
+                                      
+										  {{ include('/admin/product/_delete_form.html.twig') }}
+									</td>
+								</tr>
+							{% else %}
+								<tr>
+									<td colspan="4">no records found</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

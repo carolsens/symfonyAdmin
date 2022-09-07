@@ -1,0 +1,57 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Settings index
+{% endblock %}
+
+{% block body %}
+	<h1>Configurações gerais</h1>
+
+	<div class="x_panel">
+		<div class="x_title">
+			<h2>Itens cadastrados
+				<small></small>
+			</h2>
+
+		</div>
+
+		<div class="col-md-12 col-sm-12  ">
+			<div class="x_panel">
+
+				<div class="x_content">
+					<table class="table table-hover">
+						<thead>
+							<tr class="table-title">
+								<th>Item</th>
+								<th>Valor</th>
+								<th>Situação</th>
+								<th>Ação</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for setting in settings %}
+								<tr class="table__itens">
+									<td>{{ setting.name }}</td>
+									<td>{{ setting.value }}</td>
+									<td>{{ setting.status }}</td>
+									<td>
+										<a class='btn btn-secondary table__btn' role="button" href="{{ path('app_settings_show', {'id': settings.id}) }}">Ver</a>
+										</br>
+										<a class='btn btn-success table__btn' role="button" href="{{ path('app_settings_edit', {'id': settings.id}) }}">Editar</a>
+										<br/>
+                                        <a class='btn btn-danger table__btn' role="button" href="{{ path('app_settings_delete', {'id': settings.id}) }}">Excluir</a>
+									</td>
+								</tr>
+							</br>
+
+						</tbody>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="5">Nenhum registro encontrado</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</div></div></div></div>{% endblock %}

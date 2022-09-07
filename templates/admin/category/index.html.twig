@@ -1,0 +1,53 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Categorias
+{% endblock %}
+
+{% block body %}
+	<h1>Categorias</h1>
+
+	<div class="x_panel">
+		<div class="x_title">
+			<h2>Categorias cadastradas
+				<small></small>
+			</h2>
+			<a class="btn btn-secondary right_col__btn" href="{{ path('app_category_new') }}" role="button">Cadastrar nova categoria</a>
+		</div>
+
+		<div class="col-md-12 col-sm-12  ">
+			<div class="x_panel">
+
+				<div class="x_content">
+					<table class="col-4 offset-4 table table-hover">
+						<thead>
+							<tr class="table-title">
+								<th>Nome</th>
+								<th>Situação</th>
+								<th class="text-center">Ação</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for category in categories %}
+								<tr class="table__itens">
+									<td>{{ category.name }}</td>
+									<td>{{ category.status }}</td>
+									<td class="text-center">
+										
+										<a class='btn btn-success table__btn' role="button" href="{{ path('app_category_edit', {'id': category.id}) }}">Editar</a>
+
+										<a class='btn btn-danger table__btn' role="button" href="{{ path('app_category_delete', {'id': category.id}) }}">Excluir</a>
+									</td>
+								</tr>
+							{% else %}
+								<tr>
+									<td colspan="4">no records found</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
